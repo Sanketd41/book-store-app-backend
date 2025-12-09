@@ -10,13 +10,13 @@ require('dotenv').config()
 // middleware
 app.use(express.json());
 app.use(cors({
-    origin: ['http://localhost:5173', 'https://book-app-frontend-tau.vercel.app'],
+    origin: [
+        'http://localhost:5173',
+        'https://book-store-frontend-inky.vercel.app'
+    ],
     credentials: true,
-     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific HTTP methods
-    allowedHeaders: ['Content-Type', 'Authorization'], 
-    
-   
-  // Allow specific headers
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
 }))
 
 // routes
