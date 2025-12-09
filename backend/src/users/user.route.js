@@ -20,7 +20,7 @@ router.post("/admin", async (req, res) => {
         const token =  jwt.sign(
             {id: admin._id, username: admin.username, role: admin.role}, 
             JWT_SECRET,
-            {expiresIn: "1m"}
+            {expiresIn: "1h"}
         )
 
         return res.status(200).json({
